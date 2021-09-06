@@ -20,7 +20,7 @@ function Navbar({
     <nav
       style={{ height: height }}
       className={clsx(
-        'flex h-full w-full justify-center px-4 bg-blue-100',
+        'flex w-full justify-center px-4 bg-blue-100',
         fixed && 'fixed top-0 left-0 right-0'
       )}
     >
@@ -29,7 +29,7 @@ function Navbar({
         style={{ maxWidth: maxWidth }}
       >
         {/*Left Side*/}
-        <div className="w-32">
+        <div className="w-32 text-center">
           <Image
             src="https://www.baidu.com/img/flexible/logo/pc/result.png"
             height="30px"
@@ -42,7 +42,7 @@ function Navbar({
         <div className="flex-grow"></div>
 
         {/*Right Side*/}
-        <div className="w-32">
+        <div className="w-32 text-center">
           <Button onClick={() => setOpenAuthDialog(true)}>登 录</Button>
         </div>
       </div>

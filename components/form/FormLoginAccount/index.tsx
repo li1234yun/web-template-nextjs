@@ -1,6 +1,7 @@
 import { Button, TextField } from '@material-ui/core'
 import { Controller, useForm } from 'react-hook-form'
 import FormFieldPassword from 'components/form/FormField/FormFieldPassword'
+import { userLogin } from 'api/user'
 
 interface AccountLoginForm {
   account: string
@@ -12,7 +13,6 @@ function FormLoginAccount(): JSX.Element {
     account: '',
     password: '',
   }
-
 
   const form = useForm({
     mode: 'onBlur',
@@ -28,6 +28,9 @@ function FormLoginAccount(): JSX.Element {
 
   const onSubmit = (data: AccountLoginForm) => {
     console.log('submit data:', data)
+    userLogin(data).then((res) => {
+      console.log('user login res:', res)
+    })
   }
 
   return (
@@ -50,7 +53,11 @@ function FormLoginAccount(): JSX.Element {
         )}
       />
 
-      <FormFieldPassword name='password' form={form} formRules={{required: true}} />
+      <FormFieldPassword
+        name="password"
+        form={form}
+        formRules={{ required: true }}
+      />
 
       <Button
         variant="contained"
