@@ -1,8 +1,8 @@
-import { createTheme } from '@material-ui/core'
+import { createTheme } from '@mui/material'
 
 const lightTheme = createTheme({
   shape: {
-    borderRadius: '1px',
+    borderRadius: 1,
   },
 })
 const darkTheme = createTheme({

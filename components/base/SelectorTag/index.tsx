@@ -1,23 +1,5 @@
-import { createStyles, withStyles } from '@material-ui/styles'
-import { Chip } from '@material-ui/core'
+import { Box, Chip } from '@mui/material'
 import { useState } from 'react'
-
-const styles = createStyles({
-  root: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-
-    '& > *': {
-      margin: '3px',
-    },
-  },
-
-  clip: {
-    background: 'rgb(189, 189, 189)',
-  },
-})
 
 interface PropType {
   tags?: string[]
@@ -33,7 +15,7 @@ function SelectorTag({
 }: PropType): JSX.Element {
   const [selectedTag, setSelectedTag] = useState([])
 
-  const handleTagClick = (e) => {
+  const handleTagClick = (e: MouseEvent) => {
     console.log('handle tag click:', e)
     const tag = e.target.innerText
     let isExist = false
@@ -58,7 +40,17 @@ function SelectorTag({
   }
 
   return (
-    <div className={classes?.root}>
+    <Box sx={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexWrap: 'wrap',
+
+      '& > *': {
+        margin: '3px',
+      },
+    }}>
+
       {tags.map((item, index) => (
         <Chip
           key={index}
@@ -66,12 +58,13 @@ function SelectorTag({
           onClick={handleTagClick}
           variant="outlined"
           classes={{
-            root: selectedTag.indexOf(item) !== -1 ? classes?.clip : '',
+            root: selectedTag.indexOf(item) !== -1 ? 'bg-gray-300' : '',
           }}
         />
       ))}
-    </div>
+    </Box>
+
   )
 }
 
-export default withStyles(styles)(SelectorTag)
+export default SelectorTag

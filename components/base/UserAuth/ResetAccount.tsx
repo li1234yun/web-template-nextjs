@@ -1,12 +1,12 @@
 import FormResetAccount from 'components/form/FormResetAccount'
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import { ReactEventHandler } from 'react'
 
 interface ResetAccountProps {
   onPhoneLoginClick: ReactEventHandler
 }
 
-function ResetAccount({onPhoneLoginClick}: ResetAccountProps): JSX.Element {
+function ResetAccount({ onPhoneLoginClick }: ResetAccountProps): JSX.Element {
   return <div>
     <FormResetAccount />
 

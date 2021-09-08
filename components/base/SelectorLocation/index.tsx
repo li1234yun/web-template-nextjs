@@ -4,39 +4,29 @@
 Github repo: https://github.com/modood/Administrative-divisions-of-China
  */
 
-import { createStyles, withStyles } from '@material-ui/styles'
-import { ChangeEvent, ChangeEventHandler, useState } from 'react'
-import areaData from 'public/data/pca.json'
-import { MenuItem, TextField } from '@material-ui/core'
-
-const styles = createStyles({
-  root: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
-    columnGap: '0.3rem',
-  },
-})
+import { ChangeEvent, ChangeEventHandler, useState } from "react";
+import { MenuItem, TextField } from "@mui/material";
+import { Record } from "mdi-material-ui";
+import areaData from "public/data/pca.json";
 
 interface PropType {
   classes?: {
     root: string
   }
   size?: 'small' | 'medium'
-  onAreaChange?: (e:ChangeEvent<HTMLInputElement>, value:AreaType) => void
+  onAreaChange?: (e: ChangeEvent<HTMLInputElement>, value: AreaType) => void
 }
 
 interface AreaType {
-  province?: string
-  city?: string
-  district?: string
+  province: string
+  city: string
+  district: string
 }
 
-function SelectorLocation({
-  classes,
-  size,
-  onAreaChange,
-}: PropType): JSX.Element {
-  const provinces = Object.keys(areaData)
+function SelectorLocation({ size, onAreaChange }: PropType): JSX.Element {
+  const provinces = Object.keys(
+    areaData as Record<string, Record<string, string[]>>
+  )
 
   const [area, setArea] = useState<AreaType>({
     province: '',
@@ -102,7 +92,13 @@ function SelectorLocation({
   }
 
   return (
-    <div className={classes?.root}>
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+        columnGap: '0.3rem',
+      }}
+    >
       {/* Province */}
       <TextField
         select
@@ -153,4 +149,4 @@ function SelectorLocation({
   )
 }
 
-export default withStyles(styles)(SelectorLocation)
+export default SelectorLocation

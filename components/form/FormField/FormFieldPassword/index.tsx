@@ -1,6 +1,6 @@
 import { Controller, UseFormReturn } from 'react-hook-form'
-import { IconButton, InputAdornment, TextField } from '@material-ui/core'
-import { Visibility, VisibilityOff } from '@material-ui/icons'
+import { IconButton, InputAdornment, TextField } from '@mui/material'
+import { Visibility, VisibilityOff } from '@mui/icons-material'
 import { RegisterOptions } from 'react-hook-form/dist/types/validator'
 import { useState } from 'react'
 

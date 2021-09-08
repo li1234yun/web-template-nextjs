@@ -1,4 +1,4 @@
-import { Button, TextField } from '@material-ui/core'
+import { Button, TextField } from '@mui/material'
 import { useState } from 'react'
 import clsx from 'clsx'
 
@@ -11,10 +11,10 @@ interface FormContactBindProps {
 }
 
 function FormContactBind({
-  classes,
-  value,
-  type,
-}: FormContactBindProps): JSX.Element {
+                           classes,
+                           value,
+                           type,
+                         }: FormContactBindProps): JSX.Element {
   const [isModify, setIsModify] = useState(false)
   const [code, setCode] = useState("")
 

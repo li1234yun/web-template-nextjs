@@ -1,15 +1,9 @@
-import {
-  Button,
-  IconButton,
-  InputAdornment,
-  TextField,
-} from '@material-ui/core'
-import { SendRounded, Visibility } from '@material-ui/icons'
+import { Button, IconButton, InputAdornment, TextField } from '@mui/material'
+import { SendRounded, Visibility } from '@mui/icons-material'
 
 export default function FormRegister() {
   return (
     <form>
-
       <TextField
         label="请输入用户名"
         fullWidth

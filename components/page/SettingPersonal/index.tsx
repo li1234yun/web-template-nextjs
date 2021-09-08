@@ -7,16 +7,16 @@ import {
   Radio,
   RadioGroup,
   TextField,
-} from '@material-ui/core'
+} from '@mui/material'
 import React, { ChangeEvent, useState } from 'react'
 import SettingMotto from 'components/page/SettingPersonal/SettingMotto'
 import SelectorLocation from 'components/base/SelectorLocation'
 import SelectorTag from 'components/base/SelectorTag'
-import allIndustries from 'public/data/industries'
+import allIndustries from 'public/data/industries.json'
 import InputImage from 'components/base/InputImage'
 import { Controller, useForm } from 'react-hook-form'
 import SettingHeader from 'components/base/SettingHeader'
-import { DatePicker } from '@material-ui/lab'
+import { DatePicker } from '@mui/lab'
 
 export default function SettingPersonal(): JSX.Element {
   const [nickname, setNickName] = useState<string>('')
@@ -33,9 +33,7 @@ export default function SettingPersonal(): JSX.Element {
     console.log('submit data:', data)
   }
 
-  const handleNicknameChange = (e: ChangeEvent<HTMLInputElement>) => {
-
-  }
+  const handleNicknameChange = (e: ChangeEvent<HTMLInputElement>) => {}
 
   return (
     <div>
@@ -60,7 +58,7 @@ export default function SettingPersonal(): JSX.Element {
                 <TextField
                   {...field}
                   required
-                  error={nickname.trim() === ""}
+                  error={nickname.trim() === ''}
                   label="昵称"
                   size="small"
                   // helperText={ nickname.trim() === "" && "昵称不能为空" }

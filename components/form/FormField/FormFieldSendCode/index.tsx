@@ -4,9 +4,8 @@ import {
   InputAdornment,
   Snackbar,
   TextField,
-} from '@material-ui/core'
+} from '@mui/material'
 import { Controller, UseFormReturn } from 'react-hook-form'
-import { makeStyles } from '@material-ui/styles'
 import { useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 import { RegisterOptions } from 'react-hook-form/dist/types/validator'
@@ -20,14 +19,6 @@ interface FieldSendCodeProps {
   errMsg?: string
   formRules?: RegisterOptions
 }
-
-const useStyles = makeStyles({
-  root: {
-    '& > .MuiOutlinedInput-root': {
-      paddingRight: '2px',
-    },
-  },
-})
 
 function FormFieldSendCode({
   name,
@@ -43,7 +34,6 @@ function FormFieldSendCode({
     : codeType === 'phone'
     ? '手机号码不正确'
     : '邮件地址不正确'
-  const classes = useStyles()
 
   const {
     control,
@@ -112,7 +102,11 @@ function FormFieldSendCode({
         render={({ field }) => (
           <TextField
             {...field}
-            classes={{ root: classes.root }}
+            sx={{
+              '& > .MuiOutlinedInput-root': {
+                paddingRight: '2px',
+              },
+            }}
             error={!!errors?.[name]}
             label={!!errors?.[name] ? '验证码错误' : '验证码'}
             // helperText='验证码错误'

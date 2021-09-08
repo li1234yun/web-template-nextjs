@@ -1,9 +1,8 @@
-import Navbar from "components/base/Navbar"
-import SearchNet from "components/base/SearchNet"
-import { ReactNode } from "react-transition-group/node_modules/@types/react"
+import Navbar from 'components/base/Navbar'
+import { ReactNode } from 'react-transition-group/node_modules/@types/react'
 
 interface LayoutHomeProps {
-    children: ReactNode
+  children: ReactNode
 }
 
 function LayoutHome({ children }: LayoutHomeProps): JSX.Element {

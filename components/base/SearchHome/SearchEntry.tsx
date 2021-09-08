@@ -4,7 +4,7 @@ import {
   MenuItem,
   Select,
   SelectChangeEvent,
-} from '@material-ui/core'
+} from '@mui/material'
 import { useState } from 'react'
 import Image from 'next/image'
 

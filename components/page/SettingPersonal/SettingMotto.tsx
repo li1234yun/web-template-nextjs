@@ -1,24 +1,5 @@
-import { withStyles } from '@material-ui/styles'
-import { InputBase, Theme } from '@material-ui/core'
+import { Box, InputBase } from '@mui/material'
 import React, { ChangeEventHandler } from 'react'
-
-const styles = (theme: Theme) => ({
-  root: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f0f0f0',
-    borderRadius: theme.shape.borderRadius,
-    minHeight: '7rem',
-    padding: '0 3rem',
-  },
-  input: {
-    width: '100%',
-    fontSize: '16px',
-    fontStyle: 'italic',
-    textAlign: 'center',
-  },
-})
 
 interface PropType {
   classes?: {
@@ -37,7 +18,17 @@ function SettingMotto({
   inputRef,
 }: PropType): JSX.Element {
   return (
-    <div className={classes?.root}>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#f0f0f0',
+        borderRadius: 'shape.borderRadius',
+        minHeight: '7rem',
+        padding: '0 3rem',
+      }}
+    >
       <InputBase
         name="motto"
         inputRef={inputRef}
@@ -46,10 +37,16 @@ function SettingMotto({
         placeholder="写给自己的一句话"
         value={value}
         onChange={onChange}
+        sx={{
+          width: '100%',
+          fontSize: '16px',
+          fontStyle: 'italic',
+          textAlign: 'center',
+        }}
         classes={{ input: classes?.input, root: 'w-full' }}
       />
-    </div>
+    </Box>
   )
 }
 
-export default withStyles(styles, { withTheme: true })(SettingMotto)
+export default SettingMotto

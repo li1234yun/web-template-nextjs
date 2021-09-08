@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import UserAuthDialog from 'components/base/UserAuthDialog'
 import { useState } from 'react'
 import Image from 'next/image'

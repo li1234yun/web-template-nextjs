@@ -1,7 +1,7 @@
 import UploadBookmark from 'components/base/UploadBookmark'
 import SettingHeader from 'components/base/SettingHeader'
 import { BookmarkItem } from 'utils/bookmark'
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import { useState } from 'react'
 
 function SettingCollection(): JSX.Element {
@@ -16,7 +16,7 @@ function SettingCollection(): JSX.Element {
         <SettingHeader header="收藏设置" divider />
 
         <div>
-          <UploadBookmark onChange={handleUploadCollection} convertData={true}/>
+          <UploadBookmark onChange={handleUploadCollection} convertData={true} />
         </div>
       </div>
 

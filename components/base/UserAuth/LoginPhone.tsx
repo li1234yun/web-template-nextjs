@@ -1,5 +1,5 @@
 import FormLoginPhone from 'components/form/FormLoginPhone'
-import { Button, Divider, IconButton } from '@material-ui/core'
+import { Button, Divider, IconButton } from '@mui/material'
 import Image from 'next/image'
 import alipaySVG from 'public/img/alipay.svg'
 import wechatSVG from 'public/img/wechat.svg'

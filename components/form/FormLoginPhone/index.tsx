@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import { useForm } from 'react-hook-form'
 import FormFieldSendCode from 'components/form/FormField/FormFieldSendCode'
 import FormFieldPhone from 'components/form/FormField/FormFieldPhone'
@@ -35,7 +35,7 @@ function FormLoginPhone(): JSX.Element {
         sendTargetFieldName="account"
         codeType="phone"
         sendInterval={3}
-        formRules={{ required: {value: true, message: '验证码不能为空'} }}
+        formRules={{ required: { value: true, message: '验证码不能为空' } }}
       />
 
       <Button

@@ -10,17 +10,19 @@
   },
   "dependencies": {
     "@emotion/react": "^11.4.1",
-    "@emotion/styled": "latest",
-    "@material-ui/core": "^5.0.0-beta.3",
-    "@material-ui/icons": "next",
-    "@material-ui/lab": "^5.0.0-alpha.42",
-    "@material-ui/styles": "^5.0.0-beta.3",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.0.0-rc.0",
+    "@mui/lab": "^5.0.0-alpha.45",
+    "@mui/material": "^5.0.0-rc.0",
+    "@mui/styled-engine-sc": "^5.0.0-rc.0",
+    "axios": "^0.21.1",
     "date-fns": "^2.23.0",
     "mdi-material-ui": "^6.22.1",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-hook-form": "^7.12.2"
+    "react-hook-form": "^7.12.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@types/react": "17.0.14",

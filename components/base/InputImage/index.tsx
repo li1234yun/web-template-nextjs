@@ -1,4 +1,4 @@
-import { Avatar } from '@material-ui/core'
+import { Avatar } from '@mui/material'
 import { randomStr } from 'utils/utils'
 import React, { ChangeEventHandler, useRef, useState } from 'react'
 import clsx from 'clsx'

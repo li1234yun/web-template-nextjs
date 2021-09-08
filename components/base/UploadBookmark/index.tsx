@@ -1,7 +1,6 @@
-import { withStyles } from '@material-ui/styles'
 import { BookmarkItem, parseBookmarkFile } from 'utils/bookmark'
 import { ChangeEventHandler, useState } from 'react'
-import { Theme } from '@material-ui/core'
+import { Box, Theme } from '@mui/material'
 
 const styles = (theme: Theme) => ({
   root: {
@@ -70,18 +69,51 @@ function UploadBookmark({
   }
 
   return (
-    <div className={classes.root}>
-      <input
+    <Box
+      sx={{
+        backgroundColor: '#f0f0f0',
+        borderRadius: 'shape.borderRadius',
+        border: 'dashed 1px gray',
+        height: '6rem',
+        '& :hover': {
+          backgroundColor: '#e0e0e0',
+        },
+      }}
+    >
+      <Box
+        component="input"
         type="file"
-        className={classes.input}
+        className="hidden"
         id="upload"
         onChange={fileChange}
       />
-      <label className={classes.label} htmlFor="upload">
+      <Box
+        component="label"
+        htmlFor="upload"
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+          color: '#777777',
+          cursor: 'pointer',
+        }}
+      >
         <div>{tip}</div>
-      </label>
-    </div>
+      </Box>
+    </Box>
+    // <div className={classes.root}>
+    //   <input
+    //       type="file"
+    //       className={classes.input}
+    //       id="upload"
+    //       onChange={fileChange}
+    //     />
+    //     <label className={classes.label} htmlFor="upload">
+    //       <div>{tip}</div>
+    //     </label>
+    //   </div>
   )
 }
 
-export default withStyles(styles, { withTheme: true })(UploadBookmark)
+export default UploadBookmark

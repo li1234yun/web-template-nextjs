@@ -1,6 +1,6 @@
 import { Controller, UseFormReturn } from 'react-hook-form'
 import vars from 'utils/vars'
-import { TextField } from '@material-ui/core'
+import { TextField } from '@mui/material'
 
 interface FormFieldPhoneProps {
   name: string
@@ -8,7 +8,11 @@ interface FormFieldPhoneProps {
 }
 
 function FormFieldPhone({ name, form }: FormFieldPhoneProps): JSX.Element {
-  const { control, formState: {errors}, clearErrors } = form
+  const {
+    control,
+    formState: { errors },
+    clearErrors,
+  } = form
 
   return (
     <Controller

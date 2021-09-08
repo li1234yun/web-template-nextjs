@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core'
+import { Button } from '@mui/material'
 import { useForm } from 'react-hook-form'
 import FieldSendCode from 'components/form/FormField/FormFieldSendCode'
 import FormFieldPassword from 'components/form/FormField/FormFieldPassword'
