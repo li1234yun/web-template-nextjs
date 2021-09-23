@@ -1,6 +1,6 @@
-import { Dialog, DialogContent, DialogContentText } from '@mui/material'
-import { ReactEventHandler } from 'react'
+import { Dialog, DialogContent } from '@mui/material'
 import UserAuth from 'components/base/UserAuth'
+import { ReactEventHandler } from 'react'
 
 interface UserAuthDialogProps {
   open: boolean
@@ -8,9 +8,9 @@ interface UserAuthDialogProps {
 }
 
 export default function UserAuthDialog({
-                                         open = false,
-                                         onClose,
-                                       }: UserAuthDialogProps): JSX.Element {
+  open = false,
+  onClose,
+}: UserAuthDialogProps): JSX.Element {
   return (
     <>
       <Dialog open={open} onClose={onClose} className="overflow-y-hidden">

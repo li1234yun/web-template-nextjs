@@ -18,7 +18,7 @@
     "axios": "^0.21.1",
     "date-fns": "^2.23.0",
     "mdi-material-ui": "^6.22.1",
-    "next": "latest",
+    "next": "^11.1.2",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.12.2",
@@ -35,6 +35,6 @@
     "postcss": "^8.3.6",
     "prettier": "^2.3.2",
     "tailwindcss": "^2.2.7",
-    "typescript": "latest"
+    "typescript": "^4.4.3"
   }
 }

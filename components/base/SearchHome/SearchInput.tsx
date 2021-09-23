@@ -3,7 +3,7 @@ import { Box, Button, InputBase, ThemeOptions } from '@mui/material'
 
 interface SearchInputProps {
   options: any
-  classes: {
+  classes?: {
     root: string
     input: string
     button: string

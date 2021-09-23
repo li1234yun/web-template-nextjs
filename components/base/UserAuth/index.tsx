@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
-import LoginPhone from 'components/base/UserAuth/LoginPhone'
 import LoginAccount from 'components/base/UserAuth/LoginAccount'
+import LoginPhone from 'components/base/UserAuth/LoginPhone'
 import ResetAccount from 'components/base/UserAuth/ResetAccount'
+import React, { useState } from 'react'
 
 interface UserAuthProps {
   mode?: string
