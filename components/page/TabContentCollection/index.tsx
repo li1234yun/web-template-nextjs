@@ -1,5 +1,10 @@
+import { Box } from "@mui/system";
+import CollectionScroll from "components/base/CollectionScroll";
+
 function TabContentCollection(): JSX.Element {
-  return <div>Tab Collection</div>
+  return <Box>
+    <CollectionScroll />
+  </Box>
 }
 
 export default TabContentCollection
