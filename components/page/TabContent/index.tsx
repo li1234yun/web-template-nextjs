@@ -1,11 +1,11 @@
 import { Box, Tab, Tabs } from '@mui/material'
-import TabContentFavorite from 'components/page/TabContentFavorite'
-import TabContentCollection from 'components/page/TabContentCollection'
-import TabContentRecommend from 'components/page/TabContentRecommend'
-import TabContentExplore from 'components/page/TabContentExplore'
-import { ReactNode, useState } from 'react'
-import TabPanel from 'components/base/TabPanel'
 import clsx from 'clsx'
+import TabPanel from 'components/base/TabPanel'
+import TabContentCollection from 'components/page/TabContentCollection'
+import TabContentExplore from 'components/page/TabContentExplore'
+import TabContentFavorite from 'components/page/TabContentFavorite'
+import TabContentRecommend from 'components/page/TabContentRecommend'
+import { ReactNode, useState } from 'react'
 
 interface TabContentProps {
   classes?: {
@@ -61,7 +61,7 @@ function TabContent({ classes }: TabContentProps): JSX.Element {
             sx={{
               '&.Mui-selected': {
                 fontSize: '20px !important',
-                transition: 'all 0.1s',
+                transition: 'font-size 0.1s',
               },
             }}
           />

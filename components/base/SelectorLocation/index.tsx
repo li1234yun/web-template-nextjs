@@ -4,10 +4,9 @@
 Github repo: https://github.com/modood/Administrative-divisions-of-China
  */
 
-import { ChangeEvent, ChangeEventHandler, useState } from "react";
 import { MenuItem, TextField } from "@mui/material";
-import { Record } from "mdi-material-ui";
 import areaData from "public/data/pca.json";
+import { ChangeEvent, ChangeEventHandler, useState } from "react";
 
 interface PropType {
   classes?: {

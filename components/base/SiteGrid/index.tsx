@@ -1,5 +1,6 @@
 import Box from '@mui/system/Box'
-import Site, { SitePropsType } from 'components/base/Site'
+import { SitePropsType } from 'components/base/Site'
+import SiteCircle from 'components/base/SiteCircle'
 
 interface PropsType {
   sites: SitePropsType[]
@@ -17,7 +18,8 @@ function SiteGrid({ sites, classes }: PropsType): JSX.Element {
     }}>
       {sites.map((item, index) => (
         <Box sx={{}} key={index}>
-          <Site {...item} />
+          {/* <Site {...item} /> */}
+          <SiteCircle {...item} />
         </Box>
       ))}
     </Box>
